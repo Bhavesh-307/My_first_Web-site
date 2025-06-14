@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bagel+Fat+One&family=Bodoni+Moda:opsz,wght@6..96,500&family=Quicksand:wght@300&family=Vina+Sans&family=Yeseva+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.purple{
+    height: 100vw;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #edbfff;
+    z-index: 100;
+    opacity: 0;
+    transition: all ease 1s;
+    display: none;
+}
+.Work{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: boller;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.Work h3{
+    display: inline-block;
+    font-size: 200px;
+    font-family: 'Bagel Fat One';
+    margin-right: 10px;
+    color: #0f0d0d;
+    transition: all linear 0.4s; 
+    margin-top: 250px;
+}
+.cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #edbfff;
+    z-index: 8;
+    mix-blend-mode: difference;
+    transition:left linear 0.1s right linear 0.1s;
+}
+.main{
+    background-color: #0f0d0d;
+    cursor: none;
+}
+.page1{
+    padding-top: 12vw;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+}
+.navbar{
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 110;
+}
+.navbar img{
+    height: 30px;
+}
+.nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.navbar .circle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.navbar h4{
+    font-size: 14px;
+    font-family: 'Quicksand';
+    text-transform: uppercase;
+}
+.navbar h4:nth-child(1){
+    border-bottom: 1.5px solid #fff;
+}
+.page1 h1{
+    font-size: 7vw;
+    font-family: 'Bagel Fat One';
+    margin-left: 6vw;
+    color: #edbfff;
+}
+.page1 h2{
+    font-size: 7vw;
+    font-family: 'Quicksand';
+    margin-left: 26vw;
+    color: #edbfff;
+}
+.page1 video{
+    width: 50%;
+    margin-top: 10vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.page2{
+    min-height: 80vh;
+    width: 100%;
+    padding: 100px 5vw;
+    border-bottom: 2px solid #0f0d0d;
+    position: relative;
+    z-index: 9;
+}
+.page2 h1{
+    font-size: 7vw;
+    font-family: 'Quicksand';
+    margin-left: 13%;
+    color: #0f0d0d;
+}
+.page2-contaner{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.page2-left{
+    width: 30%;
+}
+.page2-left h2{
+    font-size: 3.5vw;
+    font-family: 'Quicksand';
+    color: #0f0d0d;
+    line-height: 4vw;
+}
+.page2-right{
+    width: 24%;
+}
+.page2-right p{
+    font-size: 20px;
+    font-family: 'Quicksand';
+    color: #0f0d0d;
+}
+.page2-right button{
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: #edbfff;
+    color: #0f0d0d;
+    margin-top: 20px;
+    padding: 4px 0;
+}
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding-top: 100px;
+}
+.page3 h1{
+    font-size: 6vw;
+    color: #0f0d0d;
+    font-family: 'Quicksand';
+    margin-left: 100px;
+}
+.page3-part1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.page3-part1 img{
+    height: 350px;
+    margin-top: 100px;
+    margin-left: 25px;
+}
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 9;
+    margin-top: 80px;
+    position: relative;
+    padding: 100px 0px;
+}
+.elem{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.text-div{
+    height: 140px;
+    overflow: hidden;
+}
+.elem img{
+    position: absolute;
+    opacity: 0;
+    width: 470px;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+}
+.elem img:nth-child(1){
+    left: 0;
+}
+.elem img:nth-child(3){
+    right: 2%;
+}
+.elem h1{
+    font-size: 7.3vw;
+    font-family:'Bagel Fat One';
+    transition: all ease-out 0.5s;
+}
+.elem:hover h1{
+    transform: translateY(-100%);
+    color: #edbfff;
+}
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+
+}
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size: cover;
+    padding: 140px 100px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 20px;
+    border-top: 1.5px solid #dadada;
+}
+.box:nth-last-child(1){
+    border-bottom: 2px solid #dadada;
+}
+.page5 h2{
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+.footer{
+    height: 90vh;
+    width: 100%;
+    background-color: #edbfff;
+}
+#boller{
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 10%;
+    position: inherit;
+    z-index: 10;
+}
+.boller-1{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: boller;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#boller h4:hover{
+    color: #0f0d0d;
+    letter-spacing: 2px;
+}
+#boller h4{
+    display: inline-block;
+    font-size: 200px;
+    font-weight: 900;
+    margin-right: 10px;
+    color: transparent;
+    display: inline-block;
+    transition: all linear 0.4s;
+    -webkit-text-stroke: 2px #0f0d0d;
+}
+@keyframes boller{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
